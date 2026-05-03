@@ -3,10 +3,11 @@ package com.dowsir7.atlas3d;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.webkit.GeolocationPermissions;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.GeolocationPermissions;
+import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         // Enable JavaScript
         webSettings.setJavaScriptEnabled(true);
 
+        // Enable file access for assets
+        webSettings.setAllowFileAccess(true);
+        webSettings.setAllowFileAccessFromFileURLs(true);
+
         // Enable geolocation
         webSettings.setGeolocationEnabled(true);
 
@@ -45,10 +50,6 @@ public class MainActivity extends AppCompatActivity {
         // Enable zoom controls
         webSettings.setBuiltInZoomControls(true);
         webSettings.setDisplayZoomControls(false);
-
-        // Allow file access for assets
-        webSettings.setAllowFileAccess(true);
-        webSettings.setAllowFileAccessFromFileURLs(true);
 
         // Set WebView client
         webView.setWebViewClient(new WebViewClient());
