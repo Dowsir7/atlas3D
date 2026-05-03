@@ -13,7 +13,13 @@ A beautiful, interactive satellite earth viewer built with Leaflet.js. View Eart
 
 ## Usage
 
+### Web Version
 Simply open `index.html` in any modern web browser. No server required!
+
+### Android App
+1. Open the `android/` folder in Android Studio
+2. Build and run the app on your device/emulator
+3. Or build an APK for distribution
 
 ### Controls
 - **Layer Panel**: Switch between different map types
@@ -33,11 +39,18 @@ Simply open `index.html` in any modern web browser. No server required!
 
 ## Technical Details
 
+### Web Version
 - Built with **Leaflet.js** for mapping
 - Uses **Google Maps** and **OpenStreetMap** tile services
 - **NASA GIBS** for scientific satellite data
 - **Nominatim API** for location search (no API key required)
 - Pure HTML/CSS/JavaScript - no build process needed
+
+### Android Version
+- **WebView** wrapper for native Android app
+- **GPS permissions** for location services
+- **Full-screen immersive** experience
+- Built with Android Studio and Gradle
 
 ## Browser Support
 
@@ -47,6 +60,12 @@ Works in all modern browsers with JavaScript enabled:
 - Safari
 - Edge
 - Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Android Requirements
+
+- Android 5.0+ (API 21+)
+- Internet connection for map tiles
+- Location permission for GPS features
 
 ## License
 
